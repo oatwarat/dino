@@ -38,6 +38,9 @@ class stage:
     def jump(self):
         self.dinosaur.update()
 
+    def gra(self):
+        self.dinosaur.gravity()
+
     def txt(self):
         self.text.draw_msg()
 
@@ -61,17 +64,11 @@ class stage:
         self.cac.clear()
         for i in self.cactus:
             i.small_cactus(self.cac)
-            self.cac.penup()
-            self.cac.speed(2)
-            self.cac.goto(-500, i.pos.y)
 
     def render_(self):
         self.bird.clear()
         for i in self.birds:
             i.birds(self.bird)
-            self.bird.penup()
-            self.bird.speed(2)
-            self.bird.goto(-500, Bird.random_y)
         self.screen.update()
 
 

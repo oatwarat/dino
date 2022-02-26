@@ -15,14 +15,13 @@ stage.txt()
 dino = stage.breeze()
 ground_lv = -50
 score = 0
-speed = 1
+speed = 50
+
 
 scr.onkeypress(stage.jump, 'space')
 scr.listen()
-scr.update()
 
-
-obs = 2
+obs = 1
 for i in range(obs):
     random = randint(500, 1200)
     small_cac = Obstacles(Vector(random, ground_lv))
@@ -38,6 +37,5 @@ while True:
     stage.update_(speed)
     stage.render()
     stage.render_()
-
-
-
+    stage.gra()
+    scr.update()
